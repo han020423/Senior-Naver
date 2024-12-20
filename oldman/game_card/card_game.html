@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카드 짝 맞추기</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="back" onclick="window_close()">나가기</button>
+  <div id="game-container">
+    <h1>카드 짝 맞추기</h1>
+    <div id="game-board"></div>
+    <div id="game-info">
+      <h3>맞춘 카드: <span id="score">0</span></h3>
+      <button id="restart-button" class="hidden">다시 시작</button>
+      <p style="font-weight: bold;"><br><br><br>점수 산정 : 맞춘 개수 + 남은 시간 + 난이도별 기본점수</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+html {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#game-board {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+#back {
+  position: fixed; /* 상단 고정 */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #03cf5d;
+  color: white;
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card {
+  width: 100%;
+  height: 100px;
+  background-color: #03cf5d;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  user-select: none;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.card.flipped {
+  background-color: #ffc107;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+#difficulty-container {
+  margin: 20px 0;
+}
+
+#difficulty-container button,
+#submit-button,
+#restart-button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #03cf5d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#difficulty-container button:hover,
+#submit-button:hover,
+#restart-button:hover {
+  background-color: #03cf5d;
+  transform: scale(1.05);
+}
+
+#difficulty-container button:active,
+#submit-button:active,
+#restart-button:active {
+  background-color: #03cf5d;
+  transform: scale(0.95);
+}
+
+#game-info {
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#score {
+  font-size: 1.2rem;
+  color: #333;
+}

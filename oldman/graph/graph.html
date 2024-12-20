@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게임 점수 그래프</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="back" onclick="window_close()">나가기</button>
+  <button id="back" onclick="window_close()">나가기</button>
+  <h1>게임 점수 그래프</h1>
+  <!-- 그래프 컨테이너를 가로로 배치할 div 추가 -->
+  <div class="charts-wrapper">
+    <!-- 게임 1 (카드 짝 맞추기 게임) 점수 그래프 -->
+    <div class="chart-container">
+      <div class="chart-title">카드 짝 맞추기</div>
+      <canvas id="matchingGameChart"></canvas>
+    </div>
+  
+    <!-- 게임 2 (숫자 기억 게임) 점수 그래프 -->
+    <div class="chart-container">
+      <div class="chart-title">숫자 기억하기</div>
+      <canvas id="memoryGameChart"></canvas>
+    </div>
+  </div>
+
+  <script src="graph.js"></script> <!-- 그래프를 그릴 JS 파일 추가 -->
+</body>
+</html>

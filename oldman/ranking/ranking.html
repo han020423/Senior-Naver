@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>순위표</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="back" onclick="window_close()">나가기</button>
+  <h1>게임 랭킹</h1>
+
+  <!-- 게임 1 랭킹 테이블 (카드 게임) -->
+  <div id="game1-ranking-container">
+    <h2>카드 짝 맞추기</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>이름</th>
+          <th>점수</th>
+        </tr>
+      </thead>
+      <tbody id="game1-ranking-list"></tbody>
+    </table>
+  </div>
+
+  <!-- 게임 2 랭킹 테이블 (메모리 게임) -->
+  <div id="game2-ranking-container">
+    <h2>숫자 기억하기</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>순위</th>
+          <th>이름</th>
+          <th>점수</th>
+        </tr>
+      </thead>
+      <tbody id="game2-ranking-list"></tbody>
+    </table>
+  </div>
+
+  <script src="ranking.js"></script>
+</body>
+</html>

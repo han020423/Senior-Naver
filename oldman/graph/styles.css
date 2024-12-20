@@ -1,0 +1,70 @@
+/* 전체 배경과 글꼴 설정 */
+html {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* 제목 스타일 */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  /* 그래프를 가로로 배치할 컨테이너 */
+  .charts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 40px;
+    gap: 20px; /* 두 그래프 사이의 간격을 20px로 설정 */
+  }
+  
+  /* 캔버스 컨테이너 스타일 */
+  .chart-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 48%; /* 두 개의 그래프가 양옆에 위치하도록 폭을 48%로 설정 */
+  }
+  
+  /* 각 게임 그래프 제목 스타일 */
+  .chart-title {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* 그래프의 캔버스 스타일 */
+  canvas {
+    width: 100% !important;
+    height: 300px;
+  }
+  #back {
+    position: fixed; /* 상단 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #03cf5d;
+    color: white;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

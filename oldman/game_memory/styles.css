@@ -1,0 +1,110 @@
+html {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  #game-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #number-display {
+    font-size: 2rem;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #03cf5d;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  #keyboard button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #03cf5b98;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #keyboard button:hover {
+    background-color: #03cf5d;
+  }
+  
+  #submit-button, #restart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #03cf5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  #submit-button:hover, #restart-button:hover {
+    background-color: #03cf5d;
+  }
+  
+  #result {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 20px 0;
+  }
+  #difficulty-container {
+    margin: 20px 0;
+  }
+  
+  #difficulty-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #03cf5d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #difficulty-container button:hover {
+    background-color: #03cf5d;
+  }
+  #score-chart {
+    margin-top: 20px;
+  }
+  #back {
+    position: fixed; /* 상단 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #03cf5d;
+    color: white;
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

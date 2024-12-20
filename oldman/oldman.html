@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>시니어네이버</title>
+  <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-left"><iframe class="lmusic" width="200" height="100" title="음악플레이어"></iframe></div>
+    <h1 class="header-content">시니어네이버</h1>
+    <div class="header-right"><h2 id="user-info" onclick="openLoginModal()">로그인하세요</h2>
+    <button id="logout-button" style="display: none;" onclick="logout()">로그아웃</button></div>
+  </div>
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h3>로그인</h3>
+      <label for="username">아이디:</label>
+      <input type="text" id="username" placeholder="아이디 입력" readonly>
+      <br>
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" placeholder="비밀번호 입력" readonly>
+      <br>
+      <div id="keypad" class="keypad">
+        <!-- 숫자 키패드 생성 -->
+        <button onclick="addKey('1')">1</button>
+        <button onclick="addKey('2')">2</button>
+        <button onclick="addKey('3')">3</button>
+        <button onclick="addKey('4')">4</button>
+        <button onclick="addKey('5')">5</button>
+        <button onclick="addKey('6')">6</button>
+        <button onclick="addKey('7')">7</button>
+        <button onclick="addKey('8')">8</button>
+        <button onclick="addKey('9')">9</button>
+        <button onclick="deleteKey()">⌫</button>
+        <button onclick="addKey('0')">0</button>
+        <button onclick="switchInput()">ID/PW전환</button>
+      </div>
+      <br>
+      <button onclick="login()">로그인</button>
+    </div>
+  </div>
+  <!-- 스크롤 가능한 콘텐츠 -->
+  <div class="content">
+
+    <div class="community-ranking">
+      
+    <a class="community" target="_blank" href="community.html" target="_blank"><img src="img/community.png" style="height: 80%;"><div>만남의광장</div></a>
+      <a href="ranking/ranking.html" target="_blank" class="ranking"><img src="img/rankv2.png" style="height: 80%;"><div>순위표</div></a>
+    </div>
+
+    <div class="games">
+      <a href="game_card/card_game.html" target="_blank" class="game"><img src="img/gmae1v3.png" style="height: 80%;"><div>카드 짝 맞추기</div></a>
+      <a href="game_memory/game_memory.html" target="_blank" class="game"><img src="img/game2v3.png" style="height: 80%;"><div>숫자 기억하기</div></a>
+      <a href="graph/graph.html" target="_blank" class="game"><img src="img/graphv2.png" style="height: 80%;"><div>기록</div></a>
+    </div>
+
+    <div class="today-food"><div style="width: 20%;">오늘의<br>음식추천</div>
+      <iframe id="foodFrame" frameborder="0" height="220px" width="100%" style="overflow: auto;"></iframe>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+  <script src="todayfood.js"></script>
+</body>
+</html>

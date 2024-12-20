@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커뮤니티</title>
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <div class="header">
+    <div class="header-left"><iframe class="lmusic" width="200" height="100" title="음악플레이어"></iframe></div>
+    <h1 class="header-content" id="back" onclick="window_close()">시니어네이버</h1>
+    <div class="header-right"><h2 id="user-info" onclick="openLoginModal()">로그인하세요</h2>
+    <button id="logout-button" style="display: none;" onclick="logout()">로그아웃</button></div>
+  </div>
+
+<!-- 로그인 모달 -->
+<div id="login-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <h3>로그인</h3>
+    <label for="username">아이디:</label>
+    <input type="text" id="username" placeholder="아이디 입력" readonly>
+    <br>
+    <label for="password">비밀번호:</label>
+    <input type="password" id="password" placeholder="비밀번호 입력" readonly>
+    <br>
+    <div id="keypad" class="keypad">
+      <!-- 숫자 키패드 생성 -->
+      <button onclick="addKey('1')">1</button>
+      <button onclick="addKey('2')">2</button>
+      <button onclick="addKey('3')">3</button>
+      <button onclick="addKey('4')">4</button>
+      <button onclick="addKey('5')">5</button>
+      <button onclick="addKey('6')">6</button>
+      <button onclick="addKey('7')">7</button>
+      <button onclick="addKey('8')">8</button>
+      <button onclick="addKey('9')">9</button>
+      <button onclick="deleteKey()">⌫</button>
+      <button onclick="addKey('0')">0</button>
+      <button onclick="switchInput()">ID/PW전환</button>
+    </div>
+    <br>
+    <button onclick="login()">로그인</button>
+  </div>
+</div>
+
+  <!-- 게시판 영역 -->
+  <div class="board">
+    <button class="write-btn" onclick="openWriteModal()">글쓰기</button>
+    <div id="post-list" class="post-list">
+      <!-- 게시글 목록이 동적으로 추가됩니다 -->
+    </div>
+  </div>
+
+  <!-- 글쓰기 모달 -->
+  <div id="write-modal" class="modal">
+    <div class="modal-content">
+      <h2>글쓰기</h2>
+      <label for="category-select">카테고리 선택:</label>
+      <select id="category-select">
+        <option value="잡담">잡담</option>
+        <option value="게이트볼">게이트볼</option>
+        <option value="산책">산책</option>
+        <option value="품앗이">품앗이</option>
+        <option value="바둑">바둑</option>
+        <option value="등산">등산</option>
+        <option value="탁구">탁구</option>
+        <option value="여행">여행</option>
+        <option value="낚시">낚시</option>
+      </select>
+  
+      <div>
+        <button id="record-btn" onclick="toggleRecording()">녹음 시작</button>
+      </div>
+      <p>마커를 드래그해 원하는 위치에 놓아주세요.</p>
+      <div id="map" style="width: 100%; height: 200px; margin-top: 10px;"></div>
+  
+      <button onclick="addPost()" disabled id="add-post-btn">등록</button>
+      <button onclick="closeWriteModal()" style="background-color: #dc3545;">닫기</button>
+    </div>
+  </div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwJeZk9pNKMMFdSTd0FMS3aTE8npVphGY&callback=initMap"></script>
+
+  <script src="community.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

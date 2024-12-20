@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 내용</title>
+  <link rel="stylesheet" href="post.css"> <!-- 외부 CSS 파일 연결 -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwJeZk9pNKMMFdSTd0FMS3aTE8npVphGY"></script>
+</head>
+<body>
+   <!-- 클래스 적용 -->
+  <h2 id="post-category"></h2>
+  <p id="post-timestamp"></p> <!-- 작성 시간 표시 -->
+  <hr>
+  <audio id="post-audio" controls style="display: block;"></audio>
+  <div id="map"></div>
+  <a href="community.html" class="back-button">뒤로가기</a>
+  <hr>
+  <h3 style="display: inline-block;">댓글</h3>
+  <button onclick="startRecordingComment()">댓글 작성</button>
+  <div id="comment-list"></div>
+  
+  <script src="post.js"></script>
+</body>
+</html>
+

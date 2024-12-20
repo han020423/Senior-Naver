@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자 기억하기</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="back" onclick="window_close()">나가기</button>
+  <div id="game-container">
+    <h1>숫자 기억하기</h1>
+    <div id="number-display">숫자가 여기에 나타납니다.</div>
+    <div id="keyboard-container" class="hidden">
+      <h2>숫자를 입력하세요:</h2>
+      <div id="keyboard"></div>
+      <button id="submit-button">제출</button>
+    </div>
+    <div id="result" class="hidden"></div>
+    <button id="restart-button" class="hidden">다시 시작</button>
+  </div>
+  <div id="score-container">
+    <h3> 이번 게임의 총 점수: <span id="score">0</span></h3>
+  </div>
+
+  <!-- 점수 기록을 표시할 영역 추가 -->
+  <div id="score-history-container">
+    <div id="score-history"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
